@@ -61,6 +61,19 @@ class LinkedList {
         }
     }
 
+    getAt(index) {
+        let current = this.head;
+        for (let i = 0; i < index; i++) {
+            current = current.next;
+        }
+        if (current) {
+            return current.data;
+        }
+        else {
+            return null;
+        }
+    }
+
     length() {
         let count = 0;
         let current = this.head;
